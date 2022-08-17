@@ -37,8 +37,7 @@ void  EXTI0_1_IRQHandler (void)
 void TIM14_IRQHandler ()
 {
     TIM14->SR &= ~TIM_SR_UIF;                               /*сброс прерывания*/
-    WWDG->CR  = WWDG_REFRESH;                               /*перезапуск WWDT*/
-    __WFI();                                                /*перевести контроллер в режим энергопотребления sleep*/
+
 }
 
 /*end file*/
